@@ -11,18 +11,14 @@ def user():
         team_atk = 6
     elif user_team > 24:
         team_atk = 5
-def joshua():
-    joshua_team = 29
-    j_team_atk = 7
-def k_pop():
-    kpop_team = 35
-    k_team = 6
-def creator():
-    creator_team = 23
-    c_team_atk = 10
-def class1c():
-    class1c_team = 37
-    c1c_team_atk = 5
+joshua_team = 29
+j_team_atk = 7
+kpop_team = 32
+k_team_atk = 6
+creator_team = 23
+c_team_atk = 10
+class1c_team = 37
+c1c_team_atk = 5
 def offense():
     user_atk = random.radint (1,6) * team_atk
 atk = "atk_who = int(input('Choose who to attack. 1. for Joshua, 2 for K_pop, 3 for creator, and 4 for 1C team'))"
@@ -53,6 +49,7 @@ while quit == False:
     user()
     offense()
     exec (atk)
+    time.sleep (5)
     exec (offense_who)
     if user_atk > defense:
         user_team = user_team + 1
@@ -74,9 +71,26 @@ while quit == False:
             creator_team = creator_team + 1
         elif atk_who == 4:
             class1c_team = class1c_team + 1
-    #If one team == 0, then  insert here :)
     if user_team == 0:
         print ('Game Over')
         break
-    elif joshua_team == 0 and kpop_team == 0 and creator_team == 0 and class1c_team == 0:
+    if joshua_team == 0 or kpop_team == 0 or creator_team == 0 or class1c_team == 0:
+        print ('Nice! You defeated a team!')
+        if joshua_team == 0:
+            print("Joshua's team has died. Do not choose it again.")
+            del joshua_team
+            del j_team_atk
+        elif kpop_team == 0:
+            print("K pop's team has died. Do not choose it again.")
+            del kpop_team
+            del k_team_atk
+        elif creator_team == 0:
+            print("Insta-win!!! You destroyed the creator's team.")
+            break
+        elif class1c_team == 0:
+            print("You killed the class! Do not choose it, though.")
+            del class1c_team
+            del c1c_team_atk
+    if joshua_team == 0 and kpop_team == 0 and creator_team == 0 and class1c_team == 0:
         print ('Amazing! You win!')
+        break
