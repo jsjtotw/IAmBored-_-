@@ -20,25 +20,25 @@ c_team_atk = 10
 class1c_team = 37
 c1c_team_atk = 5
 def offense():
-    user_atk = random.radint (1,6) * team_atk
+    user_atk = random.randint (1,6) * team_atk
 atk = "atk_who = int(input('Choose who to attack. 1. for Joshua, 2 for K_pop, 3 for creator, and 4 for 1C team'))"
 atk_loop = True
 offense_who = """while atk_loop == True:
     if atk_who  == 1:
         def defense():
-            defense = random.radint (1,6) * j_team_atk
+            defense = random.randint (1,6) * j_team_atk
             atk_loop = False
     elif atk_who == 2:
         def defense():
-            defense = random.radint (1,6) * k_team_atk
+            defense = random.randint (1,6) * k_team_atk
             atk_loop = False
     elif atk_who == 3:
         def defense():
-            defense = random.radint (1,6) * c_team_atk
+            defense = random.randint (1,6) * c_team_atk
             atk_loop = False
     elif atk_who == 4:
         def defense():
-            defense = random.radint (1,6) * c1c_team_atk
+            defense = random.randint (1,6) * c1c_team_atk
             atk_loop = False
     elif ValueError:
         print('Please type a number instead')
