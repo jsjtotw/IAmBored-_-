@@ -22,48 +22,51 @@ atk_loop = True
 offense_who = """while atk_loop == True:
     atk_who = int(input('Choose who to attack. 1. for Joshua, 2 for K_pop, 3 for creator, and 4 for 1C team'))
     time.sleep(5)
-    if atk_who  == 1:
-        def defense():
+    try:
+        if atk_who  == 1:
             defense = random.randint (1,6) * j_team_atk
             atk_loop = False
-    elif atk_who == 2:
-        def defense():
+        elif atk_who == 2:
             defense = random.randint (1,6) * k_team_atk
             atk_loop = False
-    elif atk_who == 3:
-        def defense():
+        elif atk_who == 3:
             defense = random.randint (1,6) * c_team_atk
             atk_loop = False
-    elif atk_who == 4:
-        def defense():
+        elif atk_who == 4:
             defense = random.randint (1,6) * c1c_team_atk
             atk_loop = False
-    else:
-        print('Please type a valid choice')"""
+        else:
+            print('Please type a valid choice')
+    except ValueError:
+        print('Please type a valid choice')
+    except NameError:
+        print('Like I said, do not choose it again')"""
 quit = False
 while quit == False:
     user_atk = random.randint (1,6) * team_atk
     exec (offense_who)
     if user_atk > defense:
         user_team = user_team + 1
+        print('Welp, one attack in!')
         if atk_who  == 1:
-            joshua_team = joshua_team - 1
+            joshua_team -= 1
         elif atk_who == 2:
-            kpop_team = kpop_team - 1
+            kpop_team -= 1
         elif atk_who == 3:
-            creator_team = creator_team - 1
+            creator_team -= 1
         elif atk_who == 4:
-            class1c_team = class1c_team - 1
+            class1c_team -= 1
     else:
         user_team = user_team - 1
+        print('Oopsie, you lost a player')
         if atk_who  == 1:
-            joshua_team = joshua_team + 1
+            joshua_team += 1
         elif atk_who == 2:
-            kpop_team = kpop_team + 1
+            kpop_team += 1
         elif atk_who == 3:
-            creator_team = creator_team + 1
+            creator_team += 1
         elif atk_who == 4:
-            class1c_team = class1c_team + 1
+            class1c_team += 1
     if user_team == 0:
         print ('Game Over')
         break
