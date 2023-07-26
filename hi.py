@@ -18,9 +18,10 @@ creator_team = 23
 c_team_atk = 10
 class1c_team = 37
 c1c_team_atk = 5
-atk = "atk_who = int(input('Choose who to attack. 1. for Joshua, 2 for K_pop, 3 for creator, and 4 for 1C team'))"
 atk_loop = True
 offense_who = """while atk_loop == True:
+    atk_who = int(input('Choose who to attack. 1. for Joshua, 2 for K_pop, 3 for creator, and 4 for 1C team'))
+    time.sleep(5)
     if atk_who  == 1:
         def defense():
             defense = random.randint (1,6) * j_team_atk
@@ -37,15 +38,11 @@ offense_who = """while atk_loop == True:
         def defense():
             defense = random.randint (1,6) * c1c_team_atk
             atk_loop = False
-    elif ValueError:
-        print('Please type a number instead')
     else:
         print('Please type a valid choice')"""
 quit = False
 while quit == False:
     user_atk = random.randint (1,6) * team_atk
-    exec (atk)
-    time.sleep (5)
     exec (offense_who)
     if user_atk > defense:
         user_team = user_team + 1
