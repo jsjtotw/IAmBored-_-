@@ -1,16 +1,15 @@
 import random
 import time
-def user():
-    user_team = 5
-    team_atk = 4
-    if user_team > 84:
-        team_atk = 8
-    elif user_team >  64:
-        team_atk = 7
-    elif user_team > 44:
-        team_atk = 6
-    elif user_team > 24:
-        team_atk = 5
+user_team = 5
+team_atk = 4
+if user_team > 84:
+    team_atk = 8
+elif user_team >  64:
+    team_atk = 7
+elif user_team > 44:
+    team_atk = 6
+elif user_team > 24:
+    team_atk = 5
 joshua_team = 29
 j_team_atk = 7
 kpop_team = 32
@@ -19,8 +18,6 @@ creator_team = 23
 c_team_atk = 10
 class1c_team = 37
 c1c_team_atk = 5
-def offense():
-    user_atk = random.randint (1,6) * team_atk
 atk = "atk_who = int(input('Choose who to attack. 1. for Joshua, 2 for K_pop, 3 for creator, and 4 for 1C team'))"
 atk_loop = True
 offense_who = """while atk_loop == True:
@@ -46,8 +43,7 @@ offense_who = """while atk_loop == True:
         print('Please type a valid choice')"""
 quit = False
 while quit == False:
-    user()
-    offense()
+    user_atk = random.randint (1,6) * team_atk
     exec (atk)
     time.sleep (5)
     exec (offense_who)
