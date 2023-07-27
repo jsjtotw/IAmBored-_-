@@ -87,6 +87,9 @@ while quit == False:
             print("You killed the class! Do not choose it, though.")
             del class1c_team
             del c1c_team_atk
-    if joshua_team == 0 and kpop_team == 0 and creator_team == 0 and class1c_team == 0:
-        print ('Amazing! You win!')
-        break
+    try:
+        if joshua_team == 0 and kpop_team == 0 and class1c_team == 0:
+            print ('Amazing! You win!')
+            break
+    except NameError:
+        #Idk what to put here someone put a pull request please.l
