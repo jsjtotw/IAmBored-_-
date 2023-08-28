@@ -45,3 +45,11 @@ while lives > 0:
         if aichoice == 3:
             lives = lives - 1
             print ('You have drawn with the ai')
+    print ('You have '+score+ ' amount of points currently.')
+print ('Game over!')
+if score > 15:
+    print ('Amazing! Not a lot of people reached the amount of points you have')
+elif score > 5:
+    print ('Not bad at all! You are above average!')
+else:
+    print ("It's ok! Try harder next time!")
