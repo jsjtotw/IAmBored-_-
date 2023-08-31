@@ -13,6 +13,8 @@ while lives > 0:
                 usererrorloop = False
         except ValueError:
             print ('Please input a number.')
+        if userchoice == int:
+            usererrorloop = False
     if aichoice == 1:
         print ('The ai has chosen scissors')
     elif aichoice == 2:
