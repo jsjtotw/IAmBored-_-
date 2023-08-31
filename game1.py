@@ -6,11 +6,12 @@ lives = 3
 score = 0
 while lives > 0:
     while usererrorloop == True:
-        userchoice = input('Choose: 1 for Scissors, 2 for Paper, 3 for Stone')
         try:
-            userchoice = int(userchoice)
-            if userchoice == int:
-                usererrorloop = False
+            userchoice = int(input('Choose: 1 for Scissors, 2 for Paper, 3 for Stone'))
+            if userchoice == not 1 or not 2 or not 3:
+                print ('1,2 or 3')
+            else:
+                userchoice
         except ValueError:
             print ('Please input a number.')
         if userchoice == int:
@@ -48,7 +49,13 @@ while lives > 0:
         if aichoice == 3:
             lives = lives - 1
             print ('You have drawn with the ai')
-    print ('You have '+score+ ' amount of points currently.')
+    if score == 0:
+        print ('You have no points currently.')
+    elif score == 1:
+            print ('You have '+str(score)+ 'point currently.')
+    else:
+            print ('You have '+str(score)+ 'points currently.')
+    usererrorloop = True
 print ('Game over!')
 if score > 15:
     print ('Amazing! Not a lot of people reached the amount of points you have')
