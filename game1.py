@@ -9,7 +9,8 @@ while lives > 0:
         userchoice = input('Choose: 1 for Scissors, 2 for Paper, 3 for Stone')
         try:
             userchoice = int(userchoice)
-            usererrorloop = False
+            if userchoice == int:
+                usererrorloop = False
         except ValueError:
             print ('Please input a number.')
     if aichoice == 1:
