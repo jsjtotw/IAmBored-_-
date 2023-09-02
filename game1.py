@@ -1,21 +1,24 @@
 import random
 import time
 usererrorloop = True
-aichoice = random.randint (1,3)
 lives = 3
 score = 0
 while lives > 0:
     while usererrorloop == True:
+        aichoice = random.randint (1,3)
         try:
             userchoice = int(input('Choose: 1 for Scissors, 2 for Paper, 3 for Stone'))
-            if userchoice == not 1 or not 2 or not 3:
-                print ('1,2 or 3')
+            #Someone do a pull request on how to shorten this part below
+            if userchoice == 1:
+                usererrorloop = False 
+            elif userchoice == 2:
+                usererrorloop = False
+            elif userchoice == 3:
+                usererrorloop = False
             else:
-                userchoice
+                print ('Hey, I know you want to joke around, but please,1,2,or 3.')
         except ValueError:
             print ('Please input a number.')
-        if userchoice == int:
-            usererrorloop = False
     if aichoice == 1:
         print ('The ai has chosen scissors')
     elif aichoice == 2:
@@ -46,15 +49,16 @@ while lives > 0:
             score = score + 1
         if aichoice == 2:
             print ('You have lost to the ai')
-        if aichoice == 3:
             lives = lives - 1
+        if aichoice == 3:
             print ('You have drawn with the ai')
     if score == 0:
         print ('You have no points currently.')
     elif score == 1:
-            print ('You have '+str(score)+ 'point currently.')
+            print ('You have '+str(score)+ ' point currently.')
     else:
-            print ('You have '+str(score)+ 'points currently.')
+            print ('You have '+str(score)+ ' points currently.')
+    print ('You have '+str(lives)+' lives left.')
     usererrorloop = True
 print ('Game over!')
 if score > 15:
