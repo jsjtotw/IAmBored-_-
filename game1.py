@@ -8,7 +8,6 @@ while lives > 0:
         aichoice = random.randint (1,3)
         try:
             userchoice = int(input('Choose: 1 for Scissors, 2 for Paper, 3 for Stone'))
-            #Someone do a pull request on how to shorten this part below
             if userchoice == 1:
                 usererrorloop = False 
             elif userchoice == 2:
